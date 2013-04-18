@@ -56,16 +56,16 @@ def addy(pk):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        sys.exit('ERROR: Provide brainwallet string as parameter\n'
+        sys.exit('ERROR: Provide passphrase as parameter\n'
                  "./brainwallet-check.py 'Satoshi Nakamoto'")
     privatekey = (int(hashlib.sha256(sys.argv[1]).hexdigest(), 16))
     privatekeysha = (hashlib.sha256(sys.argv[1])).hexdigest()
     bcaddy = addy(privatekey)
     word = str(sys.argv[1])
     print "-----------------------------------------------------"
-    print "brainwallet string: " + word
-    print "private key: " + str(privatekeysha)
-    print "bitcoin address: " + str(bcaddy)
+    print "Passphrase: " + word
+    print "Secret Exponent: " + str(privatekeysha)
+    print "Address: " + str(bcaddy)
 
     firstseen = os.popen("GET http://blockchain.info/q/addressfirstseen/"
                          + str(bcaddy)).read()
