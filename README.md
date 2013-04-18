@@ -11,7 +11,7 @@ The script could easily be modified to read from a file, which could contain mul
 
 ## Requirements
 * **Python**
-* **Python Modules**: os, sys, getopt, ecdsa, urllib2, binascii, hashlib
+* **Python Modules**: os, sys, ecdsa, binascii, hashlib
 * **libpcre3-dev** (for the GET system command)
 
 ## Usage
